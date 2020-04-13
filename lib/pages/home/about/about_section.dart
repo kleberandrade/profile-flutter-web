@@ -30,7 +30,7 @@ class AboutSection extends StatelessWidget {
           ),
           SectionDescription(
             description:
-                'Possui graduação em Ciência da Computação pela Escola de Engenharia de Piracicaba (2008), mestrado e doutorado em Engenharia Mecânica pela Universidade de São Paulo (2011/2016). Especialização em Game Design pela Universidade Positivo (2018). Atualmente é professor assistente na Faculdade de Tecnologia Americana e professor no Centro Universitário Salesiano São Paulo campus São José - Campinas. Tem experiência na área de Ciência da Computação, com ênfase em Inteligência Artificial, atuando principalmente nos seguintes temas: Computação Evolutiva, Redes Neurais, Serious Games, Reabilitação Robótica e Robótica Móvel.',
+                'Possui graduação em Ciência da Computação pela Escola de Engenharia de Piracicaba (2008). Mestrado e doutorado em Engenharia Mecânica pela Universidade de São Paulo (2011/2016). Especialização em Game Design pela Universidade Positivo (2018). Atualmente é professor assistente na Faculdade de Tecnologia Americana e professor no Centro Universitário Salesiano São Paulo campus São José - Campinas. Tem experiência na área de Ciência da Computação, com ênfase em Inteligência Artificial, atuando principalmente nos seguintes temas: Computação Evolutiva, Redes Neurais, Serious Games, Reabilitação Robótica e Robótica Móvel.',
           ),
         ],
       ),

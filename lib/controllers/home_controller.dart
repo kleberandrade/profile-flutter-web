@@ -15,7 +15,6 @@ class HomeController {
   final courseSectionKey = GlobalKey();
   final projectSectionKey = GlobalKey();
 
-  final _navbarHeight = 80.0;
   double _coverHeight;
   double _aboutHeight;
   double _courseHeight;
@@ -36,12 +35,12 @@ class HomeController {
 
   void jumpToAbout() {
     _updateSizes();
-    _jumpTo(_coverHeight - _navbarHeight);
+    _jumpTo(_coverHeight);
   }
 
   void jumpToCourse() {
     _updateSizes();
-    _jumpTo(_coverHeight + _aboutHeight - _navbarHeight);
+    _jumpTo(_coverHeight + _aboutHeight);
   }
 
   void jumpToProject() {
@@ -49,7 +48,7 @@ class HomeController {
     if (_courseHeight == null)
       _jumpTo(scrollController.position.maxScrollExtent);
     else
-      _jumpTo(_coverHeight + _aboutHeight + _courseHeight - _navbarHeight);
+      _jumpTo(_coverHeight + _aboutHeight + _courseHeight);
   }
 
   void _updateSizes() {

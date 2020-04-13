@@ -12,15 +12,12 @@ class NavbarItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 20.0),
-      child: FlatButton(
-        child: Text(
-          title.toUpperCase(),
-          style: TextStyle(fontSize: 14),
-        ),
-        onPressed: onPressed,
+    return FlatButton(
+      child: Text(
+        title.toUpperCase(),
+        style: TextStyle(fontSize: 14),
       ),
+      onPressed: onPressed,
     );
   }
 }
