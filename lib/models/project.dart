@@ -10,6 +10,7 @@ class Project {
   String youtube;
   String playstore;
   String itchio;
+  String medium;
 
   Project({
     this.title,
@@ -21,6 +22,7 @@ class Project {
     this.youtube,
     this.playstore,
     this.itchio,
+    this.medium,
   });
 
   Project copyWith({
@@ -33,6 +35,7 @@ class Project {
     String youtube,
     String playstore,
     String itchio,
+    String medium,
   }) {
     return Project(
       title: title ?? this.title,
@@ -44,6 +47,7 @@ class Project {
       youtube: youtube ?? this.youtube,
       playstore: playstore ?? this.playstore,
       itchio: itchio ?? this.itchio,
+      medium: medium ?? this.medium,
     );
   }
 
@@ -58,21 +62,24 @@ class Project {
       'youtube': youtube,
       'playstore': playstore,
       'itchio': itchio,
+      'medium': medium,
     };
   }
 
   static Project fromMap(Map<String, dynamic> map) {
     if (map == null) return null;
+
     return Project(
-      title: map['title'] ?? '',
-      description: map['description'] ?? '',
-      lastDate: map['lastDate'] ?? '',
-      picture: map['picture'] ?? '',
-      github: map['github'] ?? '',
-      facebook: map['facebook'] ?? '',
-      youtube: map['youtube'] ?? '',
-      playstore: map['playstore'] ?? '',
-      itchio: map['itchio'] ?? '',
+      title: map['title'],
+      description: map['description'],
+      lastDate: map['lastDate'],
+      picture: map['picture'],
+      github: map['github'],
+      facebook: map['facebook'],
+      youtube: map['youtube'],
+      playstore: map['playstore'],
+      itchio: map['itchio'],
+      medium: map['medium'],
     );
   }
 
@@ -82,7 +89,7 @@ class Project {
 
   @override
   String toString() {
-    return 'Project(title: $title, description: $description, lastDate: $lastDate, picture: $picture, github: $github, facebook: $facebook, youtube: $youtube, playstore: $playstore, itchio: $itchio)';
+    return 'Project(title: $title, description: $description, lastDate: $lastDate, picture: $picture, github: $github, facebook: $facebook, youtube: $youtube, playstore: $playstore, itchio: $itchio, medium: $medium)';
   }
 
   @override
@@ -98,7 +105,8 @@ class Project {
         o.facebook == facebook &&
         o.youtube == youtube &&
         o.playstore == playstore &&
-        o.itchio == itchio;
+        o.itchio == itchio &&
+        o.medium == medium;
   }
 
   @override
@@ -111,6 +119,7 @@ class Project {
         facebook.hashCode ^
         youtube.hashCode ^
         playstore.hashCode ^
-        itchio.hashCode;
+        itchio.hashCode ^
+        medium.hashCode;
   }
 }

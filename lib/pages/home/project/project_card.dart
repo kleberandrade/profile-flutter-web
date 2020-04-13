@@ -89,6 +89,11 @@ class ProjectCard extends StatelessWidget {
                     FontAwesomeIcons.googlePlay,
                     project.playstore ?? '',
                   ),
+                  _buildIconButton(
+                    context,
+                    FontAwesomeIcons.medium,
+                    project.medium ?? '',
+                  ),
                 ],
               ),
             )
