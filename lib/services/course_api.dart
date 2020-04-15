@@ -11,8 +11,7 @@ class CourseApi {
 
       if (response.statusCode == 200) {
         var data = json.decode(response.body);
-        var list = List<Course>.from(data["courses"].map((x) => Course.fromMap(x)));
-        return list;
+        return List<Course>.from(data["courses"].map((x) => Course.fromMap(x)));
       } else {
         return List<Course>();
       }

@@ -11,8 +11,7 @@ class ProjectApi {
 
       if (response.statusCode == 200) {
         var data = json.decode(response.body);
-        var list = List<Project>.from( data["projects"].map((x) => Project.fromMap(x)));
-        return list;
+        return List<Project>.from(data["projects"].map((x) => Project.fromMap(x)));
       } else {
         return List<Project>();
       }

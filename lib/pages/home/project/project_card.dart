@@ -91,6 +91,16 @@ class ProjectCard extends StatelessWidget {
                   ),
                   _buildIconButton(
                     context,
+                    FontAwesomeIcons.appleAlt,
+                    project.applestore ?? '',
+                  ),
+                  _buildIconButton(
+                    context,
+                    FontAwesomeIcons.researchgate,
+                    project.paper ?? '',
+                  ),
+                  _buildIconButton(
+                    context,
                     FontAwesomeIcons.medium,
                     project.medium ?? '',
                   ),

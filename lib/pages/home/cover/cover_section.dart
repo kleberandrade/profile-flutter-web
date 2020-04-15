@@ -45,7 +45,7 @@ class CoverSection extends StatelessWidget {
               horizontal: 20.0,
             ),
             child: Text(
-              'Pesquisador, professor e programador nas horas livres',
+              'Pesquisador, professor e programador',
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 18.0,

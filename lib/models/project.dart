@@ -11,7 +11,9 @@ class Project {
   String playstore;
   String itchio;
   String medium;
-
+  String paper;
+  String applestore;
+  
   Project({
     this.title,
     this.description,
@@ -23,6 +25,8 @@ class Project {
     this.playstore,
     this.itchio,
     this.medium,
+    this.paper,
+    this.applestore,
   });
 
   Project copyWith({
@@ -36,6 +40,8 @@ class Project {
     String playstore,
     String itchio,
     String medium,
+    String paper,
+    String applestore,
   }) {
     return Project(
       title: title ?? this.title,
@@ -48,6 +54,8 @@ class Project {
       playstore: playstore ?? this.playstore,
       itchio: itchio ?? this.itchio,
       medium: medium ?? this.medium,
+      paper: paper ?? this.paper,
+      applestore: applestore ?? this.applestore,
     );
   }
 
@@ -63,6 +71,8 @@ class Project {
       'playstore': playstore,
       'itchio': itchio,
       'medium': medium,
+      'paper': paper,
+      'applestore': applestore,
     };
   }
 
@@ -80,6 +90,8 @@ class Project {
       playstore: map['playstore'],
       itchio: map['itchio'],
       medium: map['medium'],
+      paper: map['paper'],
+      applestore: map['applestore'],
     );
   }
 
@@ -89,7 +101,7 @@ class Project {
 
   @override
   String toString() {
-    return 'Project(title: $title, description: $description, tag: $tag, picture: $picture, github: $github, facebook: $facebook, youtube: $youtube, playstore: $playstore, itchio: $itchio, medium: $medium)';
+    return 'Project(title: $title, description: $description, tag: $tag, picture: $picture, github: $github, facebook: $facebook, youtube: $youtube, playstore: $playstore, itchio: $itchio, medium: $medium, paper: $paper, applestore: $applestore)';
   }
 
   @override
@@ -106,7 +118,9 @@ class Project {
         o.youtube == youtube &&
         o.playstore == playstore &&
         o.itchio == itchio &&
-        o.medium == medium;
+        o.medium == medium &&
+        o.paper == paper &&
+        o.applestore == applestore;
   }
 
   @override
@@ -120,6 +134,8 @@ class Project {
         youtube.hashCode ^
         playstore.hashCode ^
         itchio.hashCode ^
-        medium.hashCode;
+        medium.hashCode ^
+        paper.hashCode ^
+        applestore.hashCode;
   }
 }
