@@ -1,6 +1,6 @@
-# kleberandrade
+# Kleber Andrade
 
-A new Flutter project.
+Site do pesquisador, professor e programador Kleber de Oliveira Andrade criado em Flutter
 
 ## Getting Started
 
