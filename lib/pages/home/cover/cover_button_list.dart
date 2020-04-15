@@ -29,19 +29,18 @@ class CoverButtonList extends StatelessWidget {
               },
             ),
             CoverButton(
+              icon: FontAwesomeIcons.researchgate,
+              onPressed: () {
+                UrlHelper.open(
+                    'https://www.researchgate.net/profile/Kleber_Andrade2');
+              },
+            ),
+            CoverButton(
               icon: FontAwesomeIcons.twitter,
               onPressed: () {
                 UrlHelper.open('https://twitter.com/pdjkleber');
               },
             ),
-            /*
-            CoverButton(
-              icon: FontAwesomeIcons.facebook,
-              onPressed: () {
-                UrlHelper.open('https://www.facebook.com/pdjkleber');
-              },
-            ),
-            */
             CoverButton(
               icon: FontAwesomeIcons.linkedin,
               onPressed: () {
@@ -72,14 +71,6 @@ class CoverButtonList extends StatelessWidget {
                 UrlHelper.open('https://kleberandrade.itch.io');
               },
             ),
-            /*
-            CoverButton(
-              icon: FontAwesomeIcons.steam,
-              onPressed: () {
-                UrlHelper.open('https://steamcommunity.com/id/kleberandrade/');
-              },
-            ),
-            */
           ],
         ),
       ),
