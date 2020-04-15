@@ -24,9 +24,12 @@ class SectionTitle extends StatelessWidget {
               ),
             ),
           ),
-          Divider(
-            color: Theme.of(context).primaryColor,
-            height: 0.1,
+          Container(
+            width: 600.0,
+            child: Divider(
+              color: Theme.of(context).primaryColor,
+              height: 0.1,
+            ),
           ),
         ],
       ),

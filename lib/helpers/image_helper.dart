@@ -16,10 +16,6 @@ class ImageHelper {
 
         return Center(
           child: CircularProgressIndicator(
-            value: loadingProgress.expectedTotalBytes != null
-                ? loadingProgress.cumulativeBytesLoaded /
-                    loadingProgress.expectedTotalBytes
-                : null,
             backgroundColor: Theme.of(context).primaryColor,
           ),
         );

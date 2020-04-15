@@ -5,5 +5,4 @@ final ThemeData myTheme = ThemeData(
   primaryColor: Color(0xFF212121),
   accentColor: Colors.deepOrange,
   primarySwatch: Colors.deepOrange,
-  fontFamily: 'Roboto',
 );

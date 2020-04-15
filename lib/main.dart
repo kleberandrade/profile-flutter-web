@@ -14,10 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Kleber Andrade',
       theme: myTheme,
-      initialRoute: HomePage.routeName,
-      routes: {
-        HomePage.routeName: (context) => HomePage(),
-      },
+      home: HomePage(),
     );
   }
 }

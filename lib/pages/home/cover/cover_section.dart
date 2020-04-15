@@ -13,7 +13,6 @@ class CoverSection extends StatelessWidget {
       height: MediaQuery.of(context).size.height,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        mainAxisSize: MainAxisSize.max,
         children: <Widget>[
           Padding(
             padding: const EdgeInsets.symmetric(
@@ -31,11 +30,13 @@ class CoverSection extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(
-              horizontal: 2.0,
+              horizontal: 20.0,
             ),
-            child: Divider(
-              height: 0.2,
-              color: Colors.white,
+            child: Center(
+              child: Divider(
+                height: 0.2,
+                color: Colors.white,
+              ),
             ),
           ),
           Padding(

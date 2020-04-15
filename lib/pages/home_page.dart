@@ -3,6 +3,7 @@ import 'package:kleberandrade/controllers/home_controller.dart';
 import 'package:kleberandrade/helpers/url_helper.dart';
 import 'package:kleberandrade/pages/home/navbar/navbar_logo.dart';
 import 'home/about/about_section.dart';
+import 'home/contact/contact_dialog.dart';
 import 'home/course/course_section.dart';
 import 'home/cover/cover_section.dart';
 import 'home/footer/footer.dart';
@@ -83,6 +84,18 @@ class _HomePageState extends State<HomePage>
         title: 'Currículo',
         onPressed: () =>
             UrlHelper.open('http://lattes.cnpq.br/1498251399219988'),
+      ),
+      new NavbarItem(
+        title: 'Contato',
+        onPressed: () {
+          showDialog<void>(
+            context: context,
+            barrierDismissible: false,
+            builder: (BuildContext context) {
+              return ContactDialog();
+            },
+          );
+        },
       ),
     ];
   }

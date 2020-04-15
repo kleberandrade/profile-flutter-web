@@ -18,7 +18,7 @@ class ProjectCard extends StatelessWidget {
       margin: EdgeInsets.all(8.0),
       color: Colors.white,
       child: Container(
-        height: 320.0,
+        height: 350.0,
         width: 320.0,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,

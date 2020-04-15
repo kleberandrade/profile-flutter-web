@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:kleberandrade/helpers/url_helper.dart';
+import 'package:kleberandrade/pages/home/contact/contact_dialog.dart';
 
 import 'cover_button.dart';
 
@@ -16,22 +17,35 @@ class CoverButtonList extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             CoverButton(
+              icon: Icons.mail,
+              onPressed: () {
+                showDialog<void>(
+                  context: context,
+                  barrierDismissible: false,
+                  builder: (BuildContext context) {
+                    return ContactDialog();
+                  },
+                );
+              },
+            ),
+            CoverButton(
               icon: FontAwesomeIcons.twitter,
               onPressed: () {
                 UrlHelper.open('https://twitter.com/pdjkleber');
               },
             ),
+            /*
             CoverButton(
               icon: FontAwesomeIcons.facebook,
               onPressed: () {
                 UrlHelper.open('https://www.facebook.com/pdjkleber');
               },
             ),
+            */
             CoverButton(
               icon: FontAwesomeIcons.linkedin,
               onPressed: () {
-                UrlHelper.open(
-                    'https://www.linkedin.com/in/kleberandrade/');
+                UrlHelper.open('https://www.linkedin.com/in/kleberandrade/');
               },
             ),
             CoverButton(
@@ -43,8 +57,7 @@ class CoverButtonList extends StatelessWidget {
             CoverButton(
               icon: FontAwesomeIcons.youtube,
               onPressed: () {
-                UrlHelper.open(
-                    'https://www.youtube.com/user/pdjkleber');
+                UrlHelper.open('https://www.youtube.com/user/pdjkleber');
               },
             ),
             CoverButton(
@@ -59,13 +72,14 @@ class CoverButtonList extends StatelessWidget {
                 UrlHelper.open('https://kleberandrade.itch.io');
               },
             ),
+            /*
             CoverButton(
               icon: FontAwesomeIcons.steam,
               onPressed: () {
-                UrlHelper.open(
-                    'https://steamcommunity.com/id/kleberandrade/');
+                UrlHelper.open('https://steamcommunity.com/id/kleberandrade/');
               },
             ),
+            */
           ],
         ),
       ),
