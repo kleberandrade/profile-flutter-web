@@ -74,7 +74,7 @@ class _CourseSectionState extends State<CourseSection>
             itemBuilder: (BuildContext ctxt, int index) {
               final course = data[index];
               if (_controller.courseFilterItemSelected == _controller.courseFilterItems[0] ||
-                  course.tag == _controller.courseFilterItemSelected)
+                  course.tag.contains(_controller.courseFilterItemSelected))
                 return CourseCard(
                   course: course,
                 );

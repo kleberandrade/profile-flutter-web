@@ -15,7 +15,7 @@ class HomeController {
   final courseSectionKey = GlobalKey();
   final projectSectionKey = GlobalKey();
   final courseFilterItems = ['Todos', 'ADS', 'Jogos', 'Udemy'];
-  final projectFilterItems = ['Todos', 'Arduino', 'Desktop', 'Jogos', 'Mobile'];
+  final projectFilterItems = ['Todos', 'Arduino', 'Desktop', 'IA', 'Jogos', 'Mobile'];
 
   int courseFilterSelected = 0;
   int projectFilterSelected = 0;

@@ -74,7 +74,7 @@ class _ProjectSectionState extends State<ProjectSection>
 
               if (_controller.projectFilterItemSelected ==
                       _controller.projectFilterItems[0] ||
-                  _controller.projectFilterItemSelected == project.tag)
+                  project.tag.contains(_controller.projectFilterItemSelected))
                 return ProjectCard(
                   project: project,
                 );
