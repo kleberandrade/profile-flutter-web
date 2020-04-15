@@ -14,7 +14,7 @@ Site do pesquisador, professor e programador Kleber de Oliveira Andrade criado e
 ## Screenshot
 
 <p align="center">
-    <img src="https://drive.google.com/open?id=1qun4t3uzodQ3HQgGi-09jQPZl4fm5ftQ" weight="600"/>
+    <img src="https://github.com/kleberandrade/profile-flutter-web/blob/master/screenshots/kleberandrade.gif" weight="600"/>
 </p>
 
 ## Licença
