@@ -14,6 +14,14 @@ class HomeController {
   final aboutSectionKey = GlobalKey();
   final courseSectionKey = GlobalKey();
   final projectSectionKey = GlobalKey();
+  final courseFilterItems = ['Todos', 'ADS', 'Jogos', 'Udemy'];
+  final projectFilterItems = ['Todos', 'Arduino', 'Desktop', 'Jogos', 'Mobile'];
+
+  int courseFilterSelected = 0;
+  int projectFilterSelected = 0;
+
+  String get courseFilterItemSelected => courseFilterItems[courseFilterSelected];
+  String get projectFilterItemSelected => projectFilterItems[projectFilterSelected];
 
   double _coverHeight;
   double _aboutHeight;

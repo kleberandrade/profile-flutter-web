@@ -12,7 +12,6 @@ class ProjectApi {
       if (response.statusCode == 200) {
         var data = json.decode(response.body);
         var list = List<Project>.from( data["projects"].map((x) => Project.fromMap(x)));
-        list.shuffle();
         return list;
       } else {
         return List<Project>();

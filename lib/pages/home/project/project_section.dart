@@ -5,6 +5,7 @@ import 'package:kleberandrade/controllers/home_controller.dart';
 import 'package:kleberandrade/models/project.dart';
 import 'package:kleberandrade/pages/home/project/project_card.dart';
 import 'package:kleberandrade/pages/home/sections/section_description.dart';
+import 'package:kleberandrade/pages/home/sections/section_filter_list.dart';
 import 'package:kleberandrade/pages/home/sections/section_title.dart';
 import 'package:kleberandrade/services/project_api.dart';
 
@@ -34,6 +35,16 @@ class _ProjectSectionState extends State<ProjectSection>
             description:
                 'Espaço destinado aos projetos desenvolvidos, tais como: aplicativos, jogos, robôs e sistemas',
           ),
+          SectionFilterList(
+            filterList: _controller.projectFilterItems,
+            onSaved: (index) {
+              setState(() {
+                _controller.projectFilterSelected = index;
+                print(
+                    'Project selected: ${_controller.projectFilterItemSelected}');
+              });
+            },
+          ),
           Padding(
             padding: const EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 32.0),
             child: Container(
@@ -60,9 +71,15 @@ class _ProjectSectionState extends State<ProjectSection>
             itemCount: data.length,
             itemBuilder: (BuildContext ctxt, int index) {
               final project = data[index];
-              return ProjectCard(
-                project: project,
-              );
+
+              if (_controller.projectFilterItemSelected ==
+                      _controller.projectFilterItems[0] ||
+                  _controller.projectFilterItemSelected == project.tag)
+                return ProjectCard(
+                  project: project,
+                );
+
+              return SizedBox();
             },
           );
         } else if (snapshot.hasError) {

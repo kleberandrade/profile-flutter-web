@@ -3,7 +3,7 @@ import 'dart:convert';
 class Project {
   String title;
   String description;
-  String lastDate;
+  String tag;
   String picture;
   String github;
   String facebook;
@@ -15,7 +15,7 @@ class Project {
   Project({
     this.title,
     this.description,
-    this.lastDate,
+    this.tag,
     this.picture,
     this.github,
     this.facebook,
@@ -28,7 +28,7 @@ class Project {
   Project copyWith({
     String title,
     String description,
-    String lastDate,
+    String tag,
     String picture,
     String github,
     String facebook,
@@ -40,7 +40,7 @@ class Project {
     return Project(
       title: title ?? this.title,
       description: description ?? this.description,
-      lastDate: lastDate ?? this.lastDate,
+      tag: tag ?? this.tag,
       picture: picture ?? this.picture,
       github: github ?? this.github,
       facebook: facebook ?? this.facebook,
@@ -55,7 +55,7 @@ class Project {
     return {
       'title': title,
       'description': description,
-      'lastDate': lastDate,
+      'tag': tag,
       'picture': picture,
       'github': github,
       'facebook': facebook,
@@ -72,7 +72,7 @@ class Project {
     return Project(
       title: map['title'],
       description: map['description'],
-      lastDate: map['lastDate'],
+      tag: map['tag'],
       picture: map['picture'],
       github: map['github'],
       facebook: map['facebook'],
@@ -89,7 +89,7 @@ class Project {
 
   @override
   String toString() {
-    return 'Project(title: $title, description: $description, lastDate: $lastDate, picture: $picture, github: $github, facebook: $facebook, youtube: $youtube, playstore: $playstore, itchio: $itchio, medium: $medium)';
+    return 'Project(title: $title, description: $description, tag: $tag, picture: $picture, github: $github, facebook: $facebook, youtube: $youtube, playstore: $playstore, itchio: $itchio, medium: $medium)';
   }
 
   @override
@@ -99,7 +99,7 @@ class Project {
     return o is Project &&
         o.title == title &&
         o.description == description &&
-        o.lastDate == lastDate &&
+        o.tag == tag &&
         o.picture == picture &&
         o.github == github &&
         o.facebook == facebook &&
@@ -113,7 +113,7 @@ class Project {
   int get hashCode {
     return title.hashCode ^
         description.hashCode ^
-        lastDate.hashCode ^
+        tag.hashCode ^
         picture.hashCode ^
         github.hashCode ^
         facebook.hashCode ^

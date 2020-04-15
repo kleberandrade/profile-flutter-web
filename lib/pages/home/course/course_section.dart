@@ -5,6 +5,7 @@ import 'package:kleberandrade/components/centered_progress.dart';
 import 'package:kleberandrade/controllers/home_controller.dart';
 import 'package:kleberandrade/models/course.dart';
 import 'package:kleberandrade/pages/home/sections/section_description.dart';
+import 'package:kleberandrade/pages/home/sections/section_filter_list.dart';
 import 'package:kleberandrade/pages/home/sections/section_title.dart';
 import 'package:kleberandrade/services/course_api.dart';
 
@@ -38,6 +39,14 @@ class _CourseSectionState extends State<CourseSection>
             description:
                 'Espaço destinado aos materiais dos cursos criados e ministrados por mim.',
           ),
+          SectionFilterList(
+            filterList: _controller.courseFilterItems,
+            onSaved: (index) {
+              setState(() {
+                _controller.courseFilterSelected = index;
+              });
+            },
+          ),
           Padding(
             padding: const EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 32.0),
             child: Container(
@@ -64,9 +73,13 @@ class _CourseSectionState extends State<CourseSection>
             itemCount: data.length,
             itemBuilder: (BuildContext ctxt, int index) {
               final course = data[index];
-              return CourseCard(
-                course: course,
-              );
+              if (_controller.courseFilterItemSelected == _controller.courseFilterItems[0] ||
+                  course.tag == _controller.courseFilterItemSelected)
+                return CourseCard(
+                  course: course,
+                );
+
+              return SizedBox();
             },
           );
         } else if (snapshot.hasError) {

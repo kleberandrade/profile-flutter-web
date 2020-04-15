@@ -2,12 +2,14 @@ import 'dart:convert';
 
 class Course {
   String title;
+  String tag;
   String description;
   String picture;
   String github;
 
   Course({
     this.title,
+    this.tag,
     this.description,
     this.picture,
     this.github,
@@ -15,12 +17,14 @@ class Course {
 
   Course copyWith({
     String title,
+    String tag,
     String description,
     String picture,
     String github,
   }) {
     return Course(
       title: title ?? this.title,
+      tag: tag ?? this.tag,
       description: description ?? this.description,
       picture: picture ?? this.picture,
       github: github ?? this.github,
@@ -30,6 +34,7 @@ class Course {
   Map<String, dynamic> toMap() {
     return {
       'title': title,
+      'tag': tag,
       'description': description,
       'picture': picture,
       'github': github,
@@ -41,6 +46,7 @@ class Course {
 
     return Course(
       title: map['title'],
+      tag: map['tag'],
       description: map['description'],
       picture: map['picture'],
       github: map['github'],
@@ -53,7 +59,7 @@ class Course {
 
   @override
   String toString() {
-    return 'Course(title: $title, description: $description, picture: $picture, github: $github)';
+    return 'Course(title: $title, tag: $tag, description: $description, picture: $picture, github: $github)';
   }
 
   @override
@@ -62,6 +68,7 @@ class Course {
 
     return o is Course &&
         o.title == title &&
+        o.tag == tag &&
         o.description == description &&
         o.picture == picture &&
         o.github == github;
@@ -70,6 +77,7 @@ class Course {
   @override
   int get hashCode {
     return title.hashCode ^
+        tag.hashCode ^
         description.hashCode ^
         picture.hashCode ^
         github.hashCode;
