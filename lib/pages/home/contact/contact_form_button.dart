@@ -17,7 +17,7 @@ class ContactFormButton extends StatelessWidget {
     return RaisedButton(
       child: Container(
         height: 50.0,
-        width: 160.0,
+        width: 140.0,
         child: Center(
           child: loading
               ? Container(

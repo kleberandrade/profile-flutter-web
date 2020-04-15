@@ -31,8 +31,8 @@ class _ContactDialogState extends State<ContactDialog> {
           mainAxisSize: MainAxisSize.min,
           children: [
             SectionDescription(
-              description:
-                  'Você tem alguma pergunta? Por favor, não hesite em me contatar diretamente. Eu entrarei em contato com você em questão de horas para ajudá-lo.',
+              description: 'Você tem alguma pergunta?',
+              vertical: 16.0,
             ),
             ContactTextField(
               hintText: 'Nome',

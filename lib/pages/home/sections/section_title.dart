@@ -11,24 +11,31 @@ class SectionTitle extends StatelessWidget {
     return Container(
       width: width,
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           Padding(
             padding: const EdgeInsets.fromLTRB(20.0, 32.0, 20.0, 20.0),
-            child: Text(
-              text,
-              style: TextStyle(
-                color: Theme.of(context).primaryColor,
-                fontSize: 42.0,
-                fontWeight: FontWeight.w500,
+            child: Center(
+              child: Text(
+                text,
+                style: TextStyle(
+                  color: Theme.of(context).primaryColor,
+                  fontSize: 42.0,
+                  fontWeight: FontWeight.w500,
+                ),
               ),
             ),
           ),
           Container(
             width: 600.0,
-            child: Divider(
-              color: Theme.of(context).primaryColor,
-              height: 0.1,
+            padding: EdgeInsets.symmetric(vertical: 4.0, horizontal: 20.0),
+            child: Center(
+              child: Divider(
+                color: Theme.of(context).primaryColor,
+                height: 0.1,
+              ),
             ),
           ),
         ],

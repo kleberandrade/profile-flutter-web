@@ -2,15 +2,16 @@ import 'package:flutter/material.dart';
 
 class SectionDescription extends StatelessWidget {
   final String description;
+  final double vertical;
 
-  SectionDescription({this.description});
+  SectionDescription({this.description, this.vertical = 32.0});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: 1080.0,
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 32.0, horizontal: 20.0),
+        padding: EdgeInsets.symmetric(vertical: vertical, horizontal: 20.0),
         child: Text(
           description,
           textAlign: TextAlign.center,
