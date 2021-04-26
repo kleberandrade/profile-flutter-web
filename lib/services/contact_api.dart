@@ -7,7 +7,8 @@ class ContactApi {
     try {
       var url =
           'https://script.google.com/macros/s/AKfycbxOjOnonM8anZ4MD1ZxI7OHe4kXmoqC6SUtPUdhEKxpYP-3Mw4/exec';
-      var response = await http.get(url + contact.toParams());
+      var response = await http.get(Uri.parse(url + contact.toParams()));
+
       return response;
     } catch (error) {
       return null;

@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:flushbar/flushbar.dart';
+import 'package:another_flushbar/flushbar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:kleberandrade/models/contact.dart';
@@ -38,7 +38,6 @@ class ContactController {
       flushbarPosition: FlushbarPosition.TOP,
       margin: EdgeInsets.symmetric(vertical: 100.0, horizontal: 20.0),
       maxWidth: 500.0,
-      borderRadius: 8.0,
       title: title,
       message: message,
       backgroundColor: color.withOpacity(0.5),
